@@ -1,10 +1,6 @@
 import { Map } from "immutable";
 
-import {
-  FETCH_COURSE_SUCCESS,
-  SELECT_COURSE,
-  UNSELECT_COURSE,
-} from "../actions/courseActionTypes";
+import { FETCH_COURSE_SUCCESS, SELECT_COURSE, UNSELECT_COURSE } from "../actions/courseActionTypes";
 
 import coursesNormalizer from "../schema/courses";
 

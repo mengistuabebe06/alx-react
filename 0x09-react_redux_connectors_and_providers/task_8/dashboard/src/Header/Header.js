@@ -74,14 +74,12 @@ Header.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.ui.get("user"),
+    user: state.get("user"),
   };
 };
 
 const mapDispatchToProps = {
   logout,
 };
-
-// export default Header;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

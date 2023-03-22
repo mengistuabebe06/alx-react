@@ -1,15 +1,9 @@
 import { Map, fromJS } from "immutable";
 
-import notificationReducer, {
-  initialNotificationState,
-} from "./notificationReducer";
-
-import {
-  FETCH_NOTIFICATIONS_SUCCESS,
-  MARK_AS_READ,
-  SET_TYPE_FILTER,
-} from "../actions/notificationActionTypes";
-
+import notificationReducer, { initialNotificationSta  } from "./notificationReducer";
+  
+import { FETCH_NOTIFICATIONS_SUCCESS, MARK_AS_READ, SET_TYPE_FILTER } from "../actions/notificationActionTypes";
+  
 import notificationsNormalizer from "../schema/notifications";
 
 describe("courseReducer tests", function () {

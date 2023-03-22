@@ -1,16 +1,12 @@
 import { Map } from "immutable";
 
-import {
-  FETCH_NOTIFICATIONS_SUCCESS,
-  MARK_AS_READ,
-  SET_TYPE_FILTER,
-} from "../actions/notificationActionTypes";
-
+import { FETCH_NOTIFICATIONS_SUCCESS, MARK_AS_READ, SET_TYPE_FILTER } from "../actions/notificationActionTypes";
+  
 export const initialNotificationState = {
-  notifications: [],
-  filter: "DEFAULT",
+    notifications: [],
+    filter: "DEFAULT",
 };
-
+  
 import notificationsNormalizer from "../schema/notifications";
 
 const notificationReducer = (state = Map(initialNotificationState), action) => {

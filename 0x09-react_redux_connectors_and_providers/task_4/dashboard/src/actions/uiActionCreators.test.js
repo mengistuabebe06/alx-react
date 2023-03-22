@@ -1,19 +1,6 @@
-import {
-  LOGIN,
-  LOGOUT,
-  DISPLAY_NOTIFICATION_DRAWER,
-  HIDE_NOTIFICATION_DRAWER,
-} from "./uiActionTypes";
+import { LOGIN, LOGOUT, DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER } from "./uiActionTypes";
 
-import {
-  login,
-  logout,
-  displayNotificationDrawer,
-  hideNotificationDrawer,
-  loginRequest,
-  loginSuccess,
-  loginFailure,
-} from "./uiActionCreators";
+import { login, logout, displayNotificationDrawer, hideNotificationDrawer, loginRequest, loginSuccess, loginFailure } from "./uiActionCreators";
 
 import fetchMock from "fetch-mock";
 

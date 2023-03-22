@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import NotificationsContainer from "../Notifications/NotificationsContainer";
+import Notifications from "../Notifications/Notifications";
 import Header from "../Header/Header";
 import BodySection from "../BodySection/BodySection";
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
@@ -71,7 +71,7 @@ export class App extends Component {
 
     return (
       <>
-        <NotificationsContainer
+        <Notifications
           displayDrawer={displayDrawer}
           handleDisplayDrawer={displayNotificationDrawer}
           handleHideDrawer={hideNotificationDrawer}
@@ -87,7 +87,7 @@ export class App extends Component {
               </BodySectionWithMarginBottom>
             ) : (
               <BodySectionWithMarginBottom title="Course list">
-                <CourseList />
+                <CourseList listCourses={listCourses} />
               </BodySectionWithMarginBottom>
             )}
           </div>
@@ -184,7 +184,5 @@ const mapDispatchToProps = {
   login: loginRequest,
   logout,
 };
-
-// export default App;
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

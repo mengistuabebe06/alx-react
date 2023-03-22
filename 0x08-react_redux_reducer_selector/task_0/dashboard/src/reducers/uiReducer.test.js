@@ -1,27 +1,23 @@
-import uiReducer from './uiReducer';
-import { DISPLAY_NOTIFICATION_DRAWER } from '../actions/uiActionTypes';
-import { SELECT_COURSE } from '../actions/courseACtionTypes';
+import uiReducer, { initialState } from "./uiReducer";
+import { DISPLAY_NOTIFICATION_DRAWER } from "../actions/uiActionTypes";
 
-describe('tests for uiReducer', () => {
-	const defaultState = {
-		isNotificationDrawerVisible: false,
-		isUserLoggedIn: false,
-		user: {},
-	};
+describe("reducer tests", function () {
+  it("verifies the state returned by the uiReducer function equals the initial state when no action is passed", function () {
+    const state = uiReducer(undefined, {});
 
-	it('should return initial state when no action is passed', () => {
-		expect(uiReducer(defaultState, 'null')).toEqual(defaultState);
-	});
+    expect(state).toEqual(initialState);
+  });
+  it("verifies the state returned by the uiReducer function equals the initial state when the action SELECT_COURSE is passed", function () {
+    const state = uiReducer(undefined, { type: "SELECT_COURSE" });
 
-	it('should return initial state when wrong action is passed', () => {
-		expect(uiReducer(defaultState, { type: SELECT_COURSE })).toEqual(
-			defaultState
-		);
-	});
+    expect(state).toEqual(initialState);
+  });
+  it("verifies the state returned by the uiReducer function, when the action DISPLAY_NOTIFICATION_DRAWER is passed, changes correctly the isNotificationDrawerVisible property", function () {
+    const state = uiReducer(undefined, { type: DISPLAY_NOTIFICATION_DRAWER });
 
-	it('should change state correctly when action is passed', () => {
-		expect(
-			uiReducer(defaultState, { type: DISPLAY_NOTIFICATION_DRAWER })
-		).toEqual({ ...defaultState, isNotificationDrawerVisible: true });
-	});
+    expect(state).toEqual({
+      ...initialState,
+      isNotificationDrawerVisible: true,
+    });
+  });
 });

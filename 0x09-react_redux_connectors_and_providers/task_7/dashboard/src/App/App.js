@@ -87,7 +87,7 @@ export class App extends Component {
               </BodySectionWithMarginBottom>
             ) : (
               <BodySectionWithMarginBottom title="Course list">
-                <CourseList />
+                <CourseList listCourses={listCourses} />
               </BodySectionWithMarginBottom>
             )}
           </div>
@@ -184,7 +184,5 @@ const mapDispatchToProps = {
   login: loginRequest,
   logout,
 };
-
-// export default App;
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

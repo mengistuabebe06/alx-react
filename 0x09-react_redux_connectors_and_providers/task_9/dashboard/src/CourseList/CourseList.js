@@ -108,6 +108,4 @@ const mapDispatchToProps = {
   unSelectCourse,
 };
 
-// export default CourseList;
-
 export default connect(mapStateToProps, mapDispatchToProps)(CourseList);
